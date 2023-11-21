@@ -1,0 +1,88 @@
+.footer
+  padding-top: 100px
+  padding-bottom: 40px
+  &__container
+    padding: 0 40px
+  &__wrap
+    background: var(--background-container)
+    border-radius: 40px
+    padding: 100px
+    display: flex
+    column-gap: 100px
+    justify-content: space-between
+    align-items: center
+  &__left-section
+    flex-basis: 50%
+  &__savor
+    font-size: 60px
+    color: var(--text-light)
+    font-weight: 600
+    margin: 0
+    margin-bottom: 44px
+    & span
+      display: block
+    & span:last-child
+      color: var(--text-accent)
+      font-style: italic
+  &__social
+    display: flex
+    column-gap: 12px
+  &__social-link
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    transition: all 0.3s
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid var(--border-light)
+    color: var(--text-accent)
+    transition: color 0.8s, background 0.8s, border 0.8s
+  &__social-link
+    &:hover
+      @media (hover: hover)
+        border: 1px solid var(--background-body)
+        color: var(--text-dark)
+        background: var(--background-body)
+        transition: color 0.3s, background 0.3s, border 0.3s
+  &__contacts
+    margin-top: -8px
+    display: flex
+    flex-direction: column
+    flex-basis: 50%
+    color: var(--text-light)
+    font-size: 16px
+    font-weight: 600
+    row-gap: 24px
+    align-items: flex-start
+    &-title
+      font-size: 24px
+      margin: 0
+      margin-bottom: 16px
+    & > a
+      color: var(--text-light)
+      text-decoration: none
+      position: relative
+      transition: text-decoration-color 0.8s
+      &:after
+        @extend %underline
+        bottom: -5px
+        background: var(--text-light)
+        transition: opacity 0.8s
+        opacity: 0
+      &:hover::after
+        @media (hover: hover)
+          transition: opacity 0.3s
+          opacity: 1
+    &-item
+      display: flex
+      column-gap: 8px
+    &-item:nth-child(2) .footer__contacts-icon
+      background: url("../assets/footer/pin-alt.svg")
+    &-item:nth-child(3) .footer__contacts-icon
+      background: url("../assets/footer/phone.svg")
+    &-item:nth-child(4) .footer__contacts-icon
+      background: url("../assets/footer/clock.svg")
+    &-icon
+      width: 20px
+      height: 20px

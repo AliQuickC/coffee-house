@@ -1,12 +1,3 @@
-%underline
-  content: ""
-  position: absolute
-  bottom: -3px
-  left: 0
-  width: 100%
-  height: 2px
-  background: var(--text-dark)
-
 .header
   padding: 20px 0
   @extend %font-medium
@@ -23,6 +14,8 @@
     position: relative
     &::after
       @extend %underline
+      bottom: -3px
+      background: var(--text-dark)
       transition: opacity 0.8s
       opacity: 0
     &_active
@@ -40,7 +33,7 @@
     margin: 0
     display: flex
     padding: 0
-    list-style-type: none/* "✔" */
+    list-style-type: none
   &__item
     margin-right: 41px
     &-link
