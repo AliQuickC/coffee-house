@@ -44,7 +44,7 @@
 
       <section class="favourites-coffee" id="favourites-coffee">
         <div class="container favourites-coffee__container">
-          <h2 class="favourites-coffee__title">Choose your <span>favorite</span> coffee</h2>
+          <h2 class="favourites-coffee__title">Choose your <span class="favourites-coffee__title-color">favorite</span> coffee</h2>
           <div class="favourites-coffee__slider favorite-slider">
             <div class="favorite-slider__slides-wrap">
 
@@ -53,7 +53,7 @@
                 <div class="favorite-slider__slides-set">
                   <div class="favorite-slider__slide-item slide-card">
                     <div class="slide-card__wrap">
-                      <img src="../assets/slider/coffee-slider-1.png" alt="" class="slide-card__picture">
+                      <img src="../assets/slider/coffee-slider-1.png" alt="coffee-slide1" class="slide-card__picture">
                       <div class="slide-card__info">
                         <h4 class="slide-card__info-title">S’mores Frappuccino</h4>
                         <p  class="slide-card__info-text">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
@@ -63,7 +63,7 @@
                   </div>
                   <div class="favorite-slider__slide-item slide-card">
                     <div class="slide-card__wrap">
-                      <img src="../assets/slider/coffee-slider-2.png" alt="" class="slide-card__picture">
+                      <img src="../assets/slider/coffee-slider-2.png" alt="coffee-slide2" class="slide-card__picture">
                       <div class="slide-card__info">
                         <h4 class="slide-card__info-title">Caramel Macchiato</h4>
                         <p  class="slide-card__info-text">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
@@ -73,7 +73,7 @@
                   </div>
                   <div class="favorite-slider__slide-item slide-card">
                     <div class="slide-card__wrap">
-                      <img src="../assets/slider/coffee-slider-3.png" alt="" class="slide-card__picture">
+                      <img src="../assets/slider/coffee-slider-3.png" alt="coffee-slide3" class="slide-card__picture">
                       <div class="slide-card__info">
                         <h4 class="slide-card__info-title">Ice coffee</h4>
                         <p  class="slide-card__info-text">A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
@@ -108,10 +108,48 @@
       </section>
       <!-- /.favourites-coffee -->
 
-      <section class="about" id="about"></section>
+      <section class="about" id="about">
+        <div class="about__container container">
+          <p class="about__description">Resource is <span class="about__description-color">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</p>
+          <div class="about__gallery">
+            <div class="about__picture">
+              <img class="about__picture-img-size" src="../assets/about/about-1.jpg" alt="about-1">
+              <img class="about__picture-img" src="../assets/about/about-1.jpg" alt="about-1">
+            </div>
+            <div class="about__picture">
+              <img class="about__picture-img-size" src="../assets/about/about-2.jpg" alt="about-2">
+              <img class="about__picture-img" src="../assets/about/about-2.jpg" alt="about-2">
+            </div>
+            <div class="about__picture">
+              <img class="about__picture-img-size" src="../assets/about/about-3.jpg" alt="about-3">
+              <img class="about__picture-img" src="../assets/about/about-3.jpg" alt="about-3">
+            </div>
+            <div class="about__picture">
+              <img class="about__picture-img-size" src="../assets/about/about-4.jpg" alt="about-4">
+              <img class="about__picture-img" src="../assets/about/about-4.jpg" alt="about-4">
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- /.about -->
 
-      <section class="mobile-app" id="mobile-app"></section>
+      <section class="mobile-app" id="mobile-app">
+        <div class="container mobile-app__container">
+          <div class="mobile-app__download">
+            <h2 class="mobile-app__title"><span class="mobile-app__title-color">Download</span> our apps to start ordering</h2>
+            <p class="mobile-app__descriptiom">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
+            <div class="mobile-app__buttons">
+              <button class="mobile-app__button-app-store app-button">
+                <span class="app-button__logo"></span> App Store
+              </button>
+              <button class="mobile-app__button-google-play app-button">
+                <span class="app-button__logo"></span> Google Play
+              </button>
+            </div>
+          </div>
+          <img src="../assets/mobile-app/mobile-phone.png" alt="phone" class="mobile-app__picture">
+        </div>
+      </section>
       <!-- /.mobile-app -->
 		</main>
 		<!-- /.main -->
@@ -121,8 +159,8 @@
         <div class="footer__wrap">
           <div class="footer__left-section">
             <p class="footer__savor">
-              <span>Sip, Savor, Smile.</span>
-              <span>It’s coffee time!</span>
+              <span class="footer__savor-string">Sip, Savor, Smile.</span>
+              <span class="footer__savor-string">It’s coffee time!</span>
             </p>
             <div class="footer__social">
               <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B2%D0%B8%D1%82%D1%82%D0%B5%D1%80" class="footer__social-link" target="_blank">
