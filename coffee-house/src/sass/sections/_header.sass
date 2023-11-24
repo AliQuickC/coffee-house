@@ -19,6 +19,7 @@
       transition: opacity 0.8s
       opacity: 0
     &_active
+      cursor: default
       &::after
         opacity: 1
     &:hover::after
@@ -27,13 +28,10 @@
         opacity: 1
 
 .menu
-  padding: 0
   margin: 0
-  &__list
-    margin: 0
-    display: flex
-    padding: 0
-    list-style-type: none
+  padding: 0
+  display: flex
+  list-style-type: none
   &__item
     margin-right: 41px
     &-link
