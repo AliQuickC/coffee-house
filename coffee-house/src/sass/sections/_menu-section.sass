@@ -1,0 +1,77 @@
+.menu
+  &__title
+    margin-top: 0
+    margin-bottom: 39px
+    margin-left: auto
+    margin-right: auto
+    max-width: 800px
+    color: var(--text-dark)
+    text-align: center
+    font-size: 60px
+    font-weight: 600
+    line-height: 125%; /* 75px */
+    &-color
+      color: var(--text-accent)
+      font-style: italic
+  &__tabs
+    margin-bottom: 40px
+    display: flex
+    justify-content: center
+    column-gap: 15px
+  &__products
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    row-gap: 40px
+
+.radio-btn
+  padding: 8px 16px 8px 8px
+  border-radius: 57.5px
+  border: 1px solid var(--border-light)
+  display: flex
+  align-items: center
+  column-gap: 8px
+  cursor: pointer
+  color: var(--text-dark)
+  font-size: 16px
+  font-weight: 600
+  transition: background 0.8s, border 0.8s, color 0.8s
+  &:hover
+    @media (hover: hover)
+      background: var(--background-container)
+      border: 1px solid var(--background-container)
+      color: var(--text-light)
+      transition: background 0.3s, border 0.3s, color 0.3s
+  &:has(input:checked)
+    background: var(--background-container)
+    border: 1px solid var(--background-container)
+    color: var(--text-light)
+    cursor: default
+  &__icon
+    width: 30px
+    height: 30px
+    border-radius: 50%
+  &:nth-child(1) .radio-btn__icon
+    background: var(--border-light) url("../assets/menu-section/tab-icons/coffe.png") no-repeat center
+  &:nth-child(2) .radio-btn__icon
+    background: var(--border-light) url("../assets/menu-section/tab-icons/tea.png") no-repeat center
+  &:nth-child(3) .radio-btn__icon
+    background: var(--border-light) url("../assets/menu-section/tab-icons/dessert.png") no-repeat center
+
+  &:nth-child(1) input:checked + .radio-btn__icon
+    background: var(--background-body) url("../assets/menu-section/tab-icons/coffe.png") no-repeat center
+  &:nth-child(1):hover .radio-btn__icon
+    @media (hover: hover)
+      background: var(--background-body) url("../assets/menu-section/tab-icons/coffe.png") no-repeat center
+
+  &:nth-child(2) input:checked + .radio-btn__icon
+    background: var(--background-body) url("../assets/menu-section/tab-icons/tea.png") no-repeat center
+  &:nth-child(2):hover .radio-btn__icon
+    @media (hover: hover)
+      background: var(--background-body) url("../assets/menu-section/tab-icons/tea.png") no-repeat center
+
+  &:nth-child(3) input:checked + .radio-btn__icon
+    background: var(--background-body) url("../assets/menu-section/tab-icons/dessert.png") no-repeat center
+  &:nth-child(3):hover .radio-btn__icon
+    @media (hover: hover)
+      background: var(--background-body) url("../assets/menu-section/tab-icons/dessert.png") no-repeat center

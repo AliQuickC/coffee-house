@@ -24,9 +24,98 @@
   <!-- /.header -->
 
 
-  <main class="main">
-    <div class="container">
-      <span class="Menu">Menu<span/>
+  <main class="menu">
+    <div class="container menu__container">
+      <h1 class="menu__title">
+        Behind each of our cups hides an <span class="menu__title-color">amazing surprise</span>
+      </h1>
+      <div class="menu__tabs">
+        <label class="menu__radio radio-btn">
+          <input class="radio-btn__input visually-hidden" type="radio" name="product-categories" value="coffe" checked>
+          <span class="radio-btn__icon"></span>
+          <span class="radio-btn__text">Coffee</span>
+        </label>
+
+        <label class="menu__radio radio-btn">
+          <input class="radio-btn__input visually-hidden" type="radio" name="product-categories" value="tea">
+          <span class="radio-btn__icon"></span>
+          <span class="radio-btn__text">Tea</span>
+        </label>
+
+        <label class="menu__radio radio-btn">
+          <input class="radio-btn__input visually-hidden" type="radio" name="product-categories" value="dessert">
+          <span class="radio-btn__icon"></span>
+          <span class="radio-btn__text">Dessert</span>
+        </label>
+      </div>
+      <div class="menu__products">
+
+        <div class="menu__product-card product-card">
+          <img src="../assets/menu-section/products/coffee-1.jpg" alt="product card" class="product-card__picture">
+          <div class="product-card__text-wrap">
+            <h5 class="product-card__name">Irish coffee</h5>
+            <p class="product-card__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+            <span class="product-card__price">$7.00</span>
+          </div>
+        </div>
+        <div class="menu__product-card product-card">
+          <img src="../assets/menu-section/products/coffee-2.jpg" alt="product card" class="product-card__picture">
+          <div class="product-card__text-wrap">
+            <h5 class="product-card__name">Kahlua coffee</h5>
+            <p class="product-card__description">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+            <span class="product-card__price">$7.00</span>
+          </div>
+        </div>
+        <div class="menu__product-card product-card">
+          <img src="../assets/menu-section/products/coffee-3.jpg" alt="product card" class="product-card__picture">
+          <div class="product-card__text-wrap">
+            <h5 class="product-card__name">Honey raf</h5>
+            <p class="product-card__description">Espresso with frothed milk, cream and aromatic honey</p>
+            <span class="product-card__price">$5.50</span>
+          </div>
+        </div>
+        <div class="menu__product-card product-card">
+          <img src="../assets/menu-section/products/coffee-4.jpg" alt="product card" class="product-card__picture">
+          <div class="product-card__text-wrap">
+            <h5 class="product-card__name">Ice cappuccino</h5>
+            <p class="product-card__description">Cappuccino with soft thick foam in summer version with ice</p>
+            <span class="product-card__price">$5.00</span>
+          </div>
+        </div>
+        <div class="menu__product-card product-card">
+          <img src="../assets/menu-section/products/coffee-5.jpg" alt="product card" class="product-card__picture">
+          <div class="product-card__text-wrap">
+            <h5 class="product-card__name">Espresso</h5>
+            <p class="product-card__description">Classic black coffee</p>
+            <span class="product-card__price">$4.50</span>
+          </div>
+        </div>
+        <div class="menu__product-card product-card">
+          <img src="../assets/menu-section/products/coffee-6.jpg" alt="product card" class="product-card__picture">
+          <div class="product-card__text-wrap">
+            <h5 class="product-card__name">Latte</h5>
+            <p class="product-card__description">Espresso coffee with the addition of steamed milk and dense milk foam</p>
+            <span class="product-card__price">$5.50</span>
+          </div>
+        </div>
+        <div class="menu__product-card product-card">
+          <img src="../assets/menu-section/products/coffee-7.jpg" alt="product card" class="product-card__picture">
+          <div class="product-card__text-wrap">
+            <h5 class="product-card__name">Latte macchiato</h5>
+            <p class="product-card__description">Espresso with frothed milk and chocolate</p>
+            <span class="product-card__price">$5.50</span>
+          </div>
+        </div>
+        <div class="menu__product-card product-card">
+          <img src="../assets/menu-section/products/coffee-8.jpg" alt="product card" class="product-card__picture">
+          <div class="product-card__text-wrap">
+            <h5 class="product-card__name">Coffee with cognac</h5>
+            <p class="product-card__description">Fragrant black coffee with cognac and whipped cream</p>
+            <span class="product-card__price">$6.50</span>
+          </div>
+        </div>
+
+      </div>
     </div>
   </main>
   <!-- /.main -->
@@ -63,7 +152,7 @@
             <span class="footer__contacts-icon"></span>
             <span class="footer__contacts-text">8558 Green Rd.,  LA</span>
           </a>
-          <a class="footer__contacts-item" href="tel:+1 (603) 555-0123">
+          <a class="footer__contacts-item" href="tel:+1(603)555-0123">
             <span class="footer__contacts-icon"></span>
             <span class="footer__contacts-text">+1 (603) 555-0123</span>
           </a>
