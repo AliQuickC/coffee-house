@@ -17,6 +17,9 @@
     grid-gap: 40px
     grid-template-columns: 1fr 1fr
     grid-template-rows: auto-fill auto-fill
+    @media(max-width: 860px)
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr
   &__picture
     position: relative
     border-radius: 20px
@@ -30,22 +33,34 @@
       grid-column-end: 2
       grid-row-start: 1
       grid-row-end: 3
+      @media(max-width: 860px)
+        grid-row-end: 2
     &:nth-child(2)
+      max-height: 430px
       grid-column-start: 1
       grid-column-end: 2
       grid-row-start: 3
       grid-row-end: 4
+      @media(max-width: 860px)
+        display: none
     &:nth-child(3)
+      max-height: 430px
       grid-column-start: 2
       grid-column-end: 3
       grid-row-start: 1
       grid-row-end: 2
+      @media(max-width: 860px)
+        display: none
     &:nth-child(4)
       max-height: 590px
       grid-column-start: 2
       grid-column-end: 3
       grid-row-start: 2
       grid-row-end: 4
+      @media(max-width: 860px)
+        grid-column-start: 1
+        grid-column-end: 2
+        grid-row-end: 3
     &-img-size
       visibility: hidden
       object-fit: cover
