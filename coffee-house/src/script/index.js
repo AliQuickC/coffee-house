@@ -1,4 +1,5 @@
 import '../sass/index.sass';
+import './burger-menu';
 
 console.log(`
 - Checking validation of pages: +18
