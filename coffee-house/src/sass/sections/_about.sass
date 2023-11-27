@@ -11,6 +11,9 @@
     &-color
       color: var(--text-accent)
       font-style: italic
+    @media(max-width: 680px)
+      font-size: 32px
+      letter-spacing: 0px
   &__gallery
     display: grid
     grid-gap: 40px
@@ -27,7 +30,7 @@
     align-items: center
     overflow: hidden
     &:nth-child(1)
-      max-height: 590px
+      height: 590px
       grid-column-start: 1
       grid-column-end: 2
       grid-row-start: 1
@@ -35,7 +38,7 @@
       @media(max-width: 860px)
         grid-row-end: 2
     &:nth-child(2)
-      max-height: 430px
+      height: 430px
       grid-column-start: 1
       grid-column-end: 2
       grid-row-start: 3
@@ -43,7 +46,7 @@
       @media(max-width: 860px)
         display: none
     &:nth-child(3)
-      max-height: 430px
+      height: 430px
       grid-column-start: 2
       grid-column-end: 3
       grid-row-start: 1
@@ -51,7 +54,7 @@
       @media(max-width: 860px)
         display: none
     &:nth-child(4)
-      max-height: 590px
+      height: 590px
       grid-column-start: 2
       grid-column-end: 3
       grid-row-start: 2
@@ -60,9 +63,6 @@
         grid-column-start: 1
         grid-column-end: 2
         grid-row-end: 3
-    &-img-size
-      visibility: hidden
-      object-fit: cover
     &-img
       position: absolute
       object-fit: cover
