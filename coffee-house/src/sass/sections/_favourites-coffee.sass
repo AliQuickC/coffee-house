@@ -1,4 +1,5 @@
 .favourites-coffee
+  padding-bottom: 100px
   &__title
     margin-top: 0
     margin-bottom: 40px
@@ -7,6 +8,8 @@
     font-weight: 600
     line-height: 125%; /* 75px */
     text-align: center
+    @media(max-width: 680px)
+      font-size: 32px
     &-color
       color: var(--text-accent)
       font-style: italic
