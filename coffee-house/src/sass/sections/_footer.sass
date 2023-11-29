@@ -1,8 +1,6 @@
 .footer
   padding-top: 100px
   padding-bottom: 40px
-  &__container
-    padding: 0 40px
   &__wrap
     background: var(--background-container)
     border-radius: 40px
@@ -17,7 +15,10 @@
       row-gap: 108px
       align-items: start
     @media(max-width: 860px)
-      padding: 100px 60px 106px 60px
+      padding: 100px 60px 108px 60px
+    @media(max-width: 680px)
+      padding: 60px 16px 66px 16px
+      row-gap: 50px
   &__left-section
     flex-basis: 50%
   &__savor
@@ -29,9 +30,15 @@
     line-height: 125% // /* 75px */
     @media(max-width: 860px)
       line-height: 127%
+    @media(max-width: 680px)
+      font-size: 32px
+      // letter-spacing: -0.2px
     &-string
       display: block
-    &-string:last-child
+      @media(max-width: 680px)
+        display: inline
+    &-string_color
+      display: inline
       color: var(--text-accent)
       font-style: italic
   &__social
