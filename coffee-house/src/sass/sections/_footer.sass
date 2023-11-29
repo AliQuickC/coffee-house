@@ -11,14 +11,24 @@
     column-gap: 100px
     justify-content: space-between
     align-items: center
+    @media(max-width: 1300px)
+      flex-direction: column
+      column-gap: 0
+      row-gap: 108px
+      align-items: start
+    @media(max-width: 860px)
+      padding: 100px 60px 106px 60px
   &__left-section
     flex-basis: 50%
   &__savor
+    margin: 0
+    margin-bottom: 40px
     font-size: 60px
     color: var(--text-light)
     font-weight: 600
-    margin: 0
-    margin-bottom: 44px
+    line-height: 125% // /* 75px */
+    @media(max-width: 860px)
+      line-height: 127%
     &-string
       display: block
     &-string:last-child
