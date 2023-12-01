@@ -35,12 +35,19 @@
     @media(max-width: 1430px)
       max-width: 1020px
     @media(max-width: 1140px)
+      margin-bottom: 40px
       max-width: 660px
       column-gap: 27px
-    @media(max-width: 680px)
-      max-width: none
+    @media(max-width: 700px)
+      max-width: 360px
       justify-content: center
-          // justify-content: space-around
+
+@media(max-width: 1140px)
+  .menu__product-card
+    display: none
+  .menu__product-card:nth-child(-n+4)
+    display: flex
+
 
 
 .radio-btn
@@ -70,6 +77,9 @@
     width: 30px
     height: 30px
     border-radius: 50%
+
+
+.menu__radio
   &:nth-child(1) .radio-btn__icon
     background: var(--border-light) url("../assets/menu-section/tab-icons/coffe.png") no-repeat center
   &:nth-child(2) .radio-btn__icon
@@ -94,3 +104,16 @@
   &:nth-child(3):hover .radio-btn__icon
     @media (hover: hover)
       background: var(--background-body) url("../assets/menu-section/tab-icons/dessert.png") no-repeat center
+
+
+.menu__refresh-button
+  margin-left: auto
+  margin-right: auto
+  display: none
+  width: 60px
+  height: 60px
+  border-radius: 50%
+  border: 1px solid var(--border-dark)
+  background: transparent url("../assets/menu-section/refresh.svg") no-repeat center
+  @media(max-width: 1140px)
+    display: block
