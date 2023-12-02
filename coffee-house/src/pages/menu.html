@@ -7,117 +7,156 @@
   <title>Coffe House</title>
 </head>
 <body>
+
   <header class="header">
     <div class="container header__container">
       <nav class="header__nav">
         <a href="./home.html" class="header__logo logo"></a>
-          <ul class="menu">
-            <li class="menu__item"><a href="./home.html#favourites-coffee" class="menu__item-link">Favorite coffee</a></li>
-            <li class="menu__item"><a href="./home.html#about" class="menu__item-link">About</a></li>
-            <li class="menu__item"><a href="./home.html#mobile-app" class="menu__item-link">Mobile app</a></li>
-            <li class="menu__item"><a href="#footer" class="menu__item-link">Contact us</a></li>
-          </ul>
-        <a href="menu.html" class="header__link-menu header__link-menu_active">Menu</a>
+        <ul class="header__menu menu">
+          <li class="menu__item"><a href="./home.html#favourites-coffee" class="menu__item-link">Favorite coffee</a></li>
+          <li class="menu__item"><a href="./home.html#about" class="menu__item-link">About</a></li>
+          <li class="menu__item"><a href="./home.html#mobile-app" class="menu__item-link">Mobile app</a></li>
+          <li class="menu__item"><a href="#footer" class="menu__item-link">Contact us</a></li>
+        </ul>
+        <a href="#" class="header__link-menu header__link-menu_active">Menu</a>
+
+        <button class="header__burger-button burger-button " id="burger-button">
+          <span class="burger-button__line-container">
+            <span class="burger-button__line1"></span>
+            <span class="burger-button__line2"></span>
+          </span>
+        </button>
+
       </nav>
     </div>
   </header>
   <!-- /.header -->
 
+  <ul class="burger-menu " id="burger-menu">
+    <li class="burger-menu__item"><a href="./home.html#favourites-coffee" class="burger-menu__item-link">Favorite coffee</a></li>
+    <li class="burger-menu__item"><a href="./home.html#about" class="burger-menu__item-link">About</a></li>
+    <li class="burger-menu__item"><a href="./home.html#mobile-app" class="burger-menu__item-link">Mobile app</a></li>
+    <li class="burger-menu__item"><a href="#footer" class="burger-menu__item-link">Contact us</a></li>
+    <li class="burger-menu__item"><a href="menu.html" class="burger-menu__item-link burger-menu__link-menu">Menu</a></li>
+  </ul>
 
   <main class="menu">
     <div class="container menu__container">
       <h1 class="menu__title">
         Behind each of our cups hides an <span class="menu__title-color">amazing surprise</span>
       </h1>
+
       <div class="menu__tabs">
         <label class="menu__radio radio-btn">
-          <input class="radio-btn__input visually-hidden" type="radio" name="product-categories" value="coffe" checked>
+          <input class="radio-btn__input visually-hidden" type="radio" name="product-categories" value="coffe" checked disabled>
           <span class="radio-btn__icon"></span>
           <span class="radio-btn__text">Coffee</span>
         </label>
 
         <label class="menu__radio radio-btn">
-          <input class="radio-btn__input visually-hidden" type="radio" name="product-categories" value="tea">
+          <input class="radio-btn__input visually-hidden" type="radio" name="product-categories" value="tea" disabled>
           <span class="radio-btn__icon"></span>
           <span class="radio-btn__text">Tea</span>
         </label>
 
         <label class="menu__radio radio-btn">
-          <input class="radio-btn__input visually-hidden" type="radio" name="product-categories" value="dessert">
+          <input class="radio-btn__input visually-hidden" type="radio" name="product-categories" value="dessert" disabled>
           <span class="radio-btn__icon"></span>
           <span class="radio-btn__text">Dessert</span>
         </label>
       </div>
+
       <div class="menu__products">
 
         <div class="menu__product-card product-card">
-          <img src="../assets/menu-section/products/coffee-1.jpg" alt="product card" class="product-card__picture">
-          <div class="product-card__text-wrap">
-            <h5 class="product-card__name">Irish coffee</h5>
-            <p class="product-card__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-            <span class="product-card__price">$7.00</span>
+          <div class="product-card__picture">
+            <img src="../assets/menu-section/products/coffee-1.jpg" alt="product card" class="product-card__img">
           </div>
+            <div class="product-card__text-wrap">
+              <h5 class="product-card__name">Irish coffee</h5>
+              <p class="product-card__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+              <span class="product-card__price">$7.00</span>
+            </div>
         </div>
         <div class="menu__product-card product-card">
-          <img src="../assets/menu-section/products/coffee-2.jpg" alt="product card" class="product-card__picture">
-          <div class="product-card__text-wrap">
-            <h5 class="product-card__name">Kahlua coffee</h5>
-            <p class="product-card__description">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
-            <span class="product-card__price">$7.00</span>
+          <div class="product-card__picture">
+            <img src="../assets/menu-section/products/coffee-2.jpg" alt="product card" class="product-card__img">
           </div>
+            <div class="product-card__text-wrap">
+              <h5 class="product-card__name">Kahlua coffee</h5>
+              <p class="product-card__description">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+              <span class="product-card__price">$7.00</span>
+            </div>
         </div>
         <div class="menu__product-card product-card">
-          <img src="../assets/menu-section/products/coffee-3.jpg" alt="product card" class="product-card__picture">
-          <div class="product-card__text-wrap">
-            <h5 class="product-card__name">Honey raf</h5>
-            <p class="product-card__description">Espresso with frothed milk, cream and aromatic honey</p>
-            <span class="product-card__price">$5.50</span>
+          <div class="product-card__picture">
+            <img src="../assets/menu-section/products/coffee-3.jpg" alt="product card" class="product-card__img">
           </div>
+            <div class="product-card__text-wrap">
+              <h5 class="product-card__name">Honey raf</h5>
+              <p class="product-card__description">Espresso with frothed milk, cream and aromatic honey</p>
+              <span class="product-card__price">$5.50</span>
+            </div>
         </div>
         <div class="menu__product-card product-card">
-          <img src="../assets/menu-section/products/coffee-4.jpg" alt="product card" class="product-card__picture">
-          <div class="product-card__text-wrap">
-            <h5 class="product-card__name">Ice cappuccino</h5>
-            <p class="product-card__description">Cappuccino with soft thick foam in summer version with ice</p>
-            <span class="product-card__price">$5.00</span>
+          <div class="product-card__picture">
+            <img src="../assets/menu-section/products/coffee-4.jpg" alt="product card" class="product-card__img">
           </div>
+            <div class="product-card__text-wrap">
+              <h5 class="product-card__name">Ice cappuccino</h5>
+              <p class="product-card__description">Cappuccino with soft thick foam in summer version with ice</p>
+              <span class="product-card__price">$5.00</span>
+            </div>
         </div>
         <div class="menu__product-card product-card">
-          <img src="../assets/menu-section/products/coffee-5.jpg" alt="product card" class="product-card__picture">
-          <div class="product-card__text-wrap">
-            <h5 class="product-card__name">Espresso</h5>
-            <p class="product-card__description">Classic black coffee</p>
-            <span class="product-card__price">$4.50</span>
+          <div class="product-card__picture">
+            <img src="../assets/menu-section/products/coffee-5.jpg" alt="product card" class="product-card__img">
           </div>
+            <div class="product-card__text-wrap">
+              <h5 class="product-card__name">Espresso</h5>
+              <p class="product-card__description">Classic black coffee</p>
+              <span class="product-card__price">$4.50</span>
+            </div>
         </div>
         <div class="menu__product-card product-card">
-          <img src="../assets/menu-section/products/coffee-6.jpg" alt="product card" class="product-card__picture">
-          <div class="product-card__text-wrap">
-            <h5 class="product-card__name">Latte</h5>
-            <p class="product-card__description">Espresso coffee with the addition of steamed milk and dense milk foam</p>
-            <span class="product-card__price">$5.50</span>
+          <div class="product-card__picture">
+            <img src="../assets/menu-section/products/coffee-6.jpg" alt="product card" class="product-card__img">
           </div>
+            <div class="product-card__text-wrap">
+              <h5 class="product-card__name">Latte</h5>
+              <p class="product-card__description">Espresso coffee with the addition of steamed milk and dense milk foam</p>
+              <span class="product-card__price">$5.50</span>
+            </div>
         </div>
         <div class="menu__product-card product-card">
-          <img src="../assets/menu-section/products/coffee-7.jpg" alt="product card" class="product-card__picture">
-          <div class="product-card__text-wrap">
-            <h5 class="product-card__name">Latte macchiato</h5>
-            <p class="product-card__description">Espresso with frothed milk and chocolate</p>
-            <span class="product-card__price">$5.50</span>
+          <div class="product-card__picture">
+            <img src="../assets/menu-section/products/coffee-7.jpg" alt="product card" class="product-card__img">
           </div>
+            <div class="product-card__text-wrap">
+              <h5 class="product-card__name">Latte macchiato</h5>
+              <p class="product-card__description">Espresso with frothed milk and chocolate</p>
+              <span class="product-card__price">$5.50</span>
+            </div>
         </div>
         <div class="menu__product-card product-card">
-          <img src="../assets/menu-section/products/coffee-8.jpg" alt="product card" class="product-card__picture">
-          <div class="product-card__text-wrap">
-            <h5 class="product-card__name">Coffee with cognac</h5>
-            <p class="product-card__description">Fragrant black coffee with cognac and whipped cream</p>
-            <span class="product-card__price">$6.50</span>
+          <div class="product-card__picture">
+            <img src="../assets/menu-section/products/coffee-8.jpg" alt="product card" class="product-card__img">
           </div>
+            <div class="product-card__text-wrap">
+              <h5 class="product-card__name">Coffee with cognac</h5>
+              <p class="product-card__description">Fragrant black coffee with cognac and whipped cream</p>
+              <span class="product-card__price">$6.50</span>
+            </div>
         </div>
 
       </div>
+
+      <button class="menu__refresh-button"></button>
+
+
     </div>
   </main>
+
   <!-- /.main -->
 
   <footer class="footer" id="footer">
@@ -125,23 +164,23 @@
       <div class="footer__wrap">
         <div class="footer__left-section">
           <p class="footer__savor">
-            <span>Sip, Savor, Smile.</span>
-            <span>It’s coffee time!</span>
+            <span class="footer__savor-string">Sip, Savor, Smile.</span>
+            <span class="footer__savor-string footer__savor-string_color">It’s coffee time!</span>
           </p>
           <div class="footer__social">
             <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B2%D0%B8%D1%82%D1%82%D0%B5%D1%80" class="footer__social-link" target="_blank">
               <svg width="24" height="24">
-                <use href="../assets/icons/social.svg#twitter" ></use>
+                <use href="../assets/icons/social.svg#twitter"></use>
               </svg>
             </a>
             <a href="https://ru.wikipedia.org/wiki/Instagram" class="footer__social-link" target="_blank">
               <svg width="22" height="22">
-                <use href="../assets/icons/social.svg#instagram" ></use>
+                <use href="../assets/icons/social.svg#instagram"></use>
               </svg>
             </a>
             <a href="https://ru.wikipedia.org/wiki/Facebook" class="footer__social-link" target="_blank">
               <svg width="22" height="22">
-                <use href="../assets/icons/social.svg#facebook" ></use>
+                <use href="../assets/icons/social.svg#facebook"></use>
               </svg>
             </a>
           </div>

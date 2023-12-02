@@ -1,8 +1,6 @@
 .footer
   padding-top: 100px
   padding-bottom: 40px
-  &__container
-    padding: 0 40px
   &__wrap
     background: var(--background-container)
     border-radius: 40px
@@ -11,17 +9,36 @@
     column-gap: 100px
     justify-content: space-between
     align-items: center
+    @media(max-width: 1300px)
+      flex-direction: column
+      column-gap: 0
+      row-gap: 108px
+      align-items: start
+    @media(max-width: 860px)
+      padding: 100px 60px 107px 60px
+    @media(max-width: 680px)
+      padding: 60px 16px 66px 16px
+      row-gap: 50px
   &__left-section
     flex-basis: 50%
   &__savor
+    margin: 0
+    margin-bottom: 40px
     font-size: 60px
     color: var(--text-light)
     font-weight: 600
-    margin: 0
-    margin-bottom: 44px
+    line-height: 125% // /* 75px */
+    @media(max-width: 860px)
+      line-height: 127%
+    @media(max-width: 680px)
+      font-size: 32px
+      // letter-spacing: -0.2px
     &-string
       display: block
-    &-string:last-child
+      @media(max-width: 680px)
+        display: inline
+    &-string_color
+      display: inline
       color: var(--text-accent)
       font-style: italic
   &__social

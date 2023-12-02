@@ -7,23 +7,42 @@
 		<title>Coffe House</title>
 	</head>
 	<body>
+
 		<header class="header">
 			<div class="container header__container">
 				<nav class="header__nav">
           <a href="./home.html" class="header__logo logo"></a>
-            <ul class="menu">
-              <li class="menu__item"><a href="./home.html#favourites-coffee" class="menu__item-link">Favorite coffee</a></li>
-              <li class="menu__item"><a href="./home.html#about" class="menu__item-link">About</a></li>
-              <li class="menu__item"><a href="./home.html#mobile-app" class="menu__item-link">Mobile app</a></li>
-              <li class="menu__item"><a href="#footer" class="menu__item-link">Contact us</a></li>
-            </ul>
+          <ul class="header__menu menu">
+            <li class="menu__item"><a href="./home.html#favourites-coffee" class="menu__item-link">Favorite coffee</a></li>
+            <li class="menu__item"><a href="./home.html#about" class="menu__item-link">About</a></li>
+            <li class="menu__item"><a href="./home.html#mobile-app" class="menu__item-link">Mobile app</a></li>
+            <li class="menu__item"><a href="#footer" class="menu__item-link">Contact us</a></li>
+          </ul>
           <a href="menu.html" class="header__link-menu ">Menu</a>
+
+          <button class="header__burger-button burger-button " id="burger-button">
+            <span class="burger-button__line-container">
+              <span class="burger-button__line1"></span>
+              <span class="burger-button__line2"></span>
+            </span>
+          </button>
+
         </nav>
 			</div>
+
 		</header>
 		<!-- /.header -->
 
-		<main class="main">
+    <ul class="burger-menu " id="burger-menu">
+      <li class="burger-menu__item"><a href="./home.html#favourites-coffee" class="burger-menu__item-link">Favorite coffee</a></li>
+      <li class="burger-menu__item"><a href="./home.html#about" class="burger-menu__item-link">About</a></li>
+      <li class="burger-menu__item"><a href="./home.html#mobile-app" class="burger-menu__item-link">Mobile app</a></li>
+      <li class="burger-menu__item"><a href="#footer" class="burger-menu__item-link">Contact us</a></li>
+      <li class="burger-menu__item"><a href="menu.html" class="burger-menu__item-link burger-menu__link-menu">Menu</a></li>
+    </ul>
+
+    <main class="main">
+
       <section class="enjoy">
         <div class="container enjoy__container">
           <div class="enjoy__wrap">
@@ -112,19 +131,15 @@
           <p class="about__description">Resource is <span class="about__description-color">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</p>
           <div class="about__gallery">
             <div class="about__picture">
-              <img class="about__picture-img-size" src="../assets/about/about-1.jpg" alt="about-1">
               <img class="about__picture-img" src="../assets/about/about-1.jpg" alt="about-1">
             </div>
             <div class="about__picture">
-              <img class="about__picture-img-size" src="../assets/about/about-2.jpg" alt="about-2">
               <img class="about__picture-img" src="../assets/about/about-2.jpg" alt="about-2">
             </div>
             <div class="about__picture">
-              <img class="about__picture-img-size" src="../assets/about/about-3.jpg" alt="about-3">
               <img class="about__picture-img" src="../assets/about/about-3.jpg" alt="about-3">
             </div>
             <div class="about__picture">
-              <img class="about__picture-img-size" src="../assets/about/about-4.jpg" alt="about-4">
               <img class="about__picture-img" src="../assets/about/about-4.jpg" alt="about-4">
             </div>
           </div>
@@ -158,16 +173,17 @@
         </div>
       </section>
       <!-- /.mobile-app -->
-		</main>
-		<!-- /.main -->
 
-		<footer class="footer" id="footer">
-			<div class="container footer__container">
+    </main>
+    <!-- /.main -->
+
+    <footer class="footer" id="footer">
+      <div class="container footer__container">
         <div class="footer__wrap">
           <div class="footer__left-section">
             <p class="footer__savor">
               <span class="footer__savor-string">Sip, Savor, Smile.</span>
-              <span class="footer__savor-string">It’s coffee time!</span>
+              <span class="footer__savor-string footer__savor-string_color">It’s coffee time!</span>
             </p>
             <div class="footer__social">
               <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B2%D0%B8%D1%82%D1%82%D0%B5%D1%80" class="footer__social-link" target="_blank">
@@ -204,7 +220,8 @@
           </div>
         </div>
       </div>
-		</footer>
-		<!-- /.footer -->
+    </footer>
+    <!-- /.footer -->
+
 	</body>
 </html>
