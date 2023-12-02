@@ -1,21 +1,22 @@
 .burger-menu
-  z-index: 1
-  position: absolute
-  top: calc(-100vh + -100px)
+  width: 100vw
+  height: 100vh
+  top: 100px
+  right: -100vw
   margin: 0
+  position: fixed
   padding: 0
   padding-top: 160px
   background: var(--background-body)
-  height: calc(100vh + 100px)
-  width: 100vw
   display: flex
   flex-direction: column
   row-gap: 61px
   align-items: center
   list-style-type: none
-  transition: top 0.4s
+  z-index: 1
+  transition: right 0.4s
   &_active
-    top: 0
+    right: 0
   &__item:last-child
     margin-top: 42px
     width: 143px
