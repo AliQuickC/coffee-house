@@ -1,4 +1,4 @@
-(function () {
+export default function () {
 	const burgerButton = document.getElementById('burger-button');
 	const burgerMenu = document.getElementById('burger-menu');
 
@@ -7,7 +7,6 @@
 			burgerButton.classList.remove('burger-button_active');
 			offBurgerMenu();
 		}
-		console.log('event.currentTarget: ', event.target);
 	};
 
 	burgerButton.onclick = (event) => {
@@ -31,4 +30,4 @@
 		document.body.classList.add('scroll-block');
 		document.documentElement.classList.add('scroll-block');
 	}
-})();
+};

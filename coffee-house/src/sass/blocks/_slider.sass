@@ -19,6 +19,7 @@
     position: absolute
     display: flex
     left: calc(0 * var(--card-width))
+    transition: none
   &__slide-item
     width: var(--card-width)
     height: var(--card-height)
@@ -57,7 +58,7 @@
     right: 3px
     @media(max-width: 1300px)
       right: 0px
-  &__pagination
+  &__progress
     padding-top: 40px
     display: flex
     justify-content: center
@@ -67,12 +68,16 @@
       height: 4px
       border-radius: 2px
       background: var(--border-light)
-      cursor: pointer
-      &_active
+      border: none
+      &::-webkit-progress-bar
+        background: var(--border-light)
+      &::-webkit-progress-value
+          background: var(--border-dark)
+      &::-moz-progress-bar
         background: var(--border-dark)
-        cursor: default
 
 .slide-card
+  @extend %unselectable
   &__wrap
     margin-left: auto
     margin-right: auto

@@ -6,7 +6,7 @@
 		<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
 		<title>Coffe House</title>
 	</head>
-	<body>
+	<body class="home-page">
 
 		<header class="header">
 			<div class="container header__container">
@@ -68,7 +68,7 @@
 
               <div class="favorite-slider__frame">
 
-                <div class="favorite-slider__slides-set">
+                <div class="favorite-slider__slides-set" id="slides-container">
                   <div class="favorite-slider__slide-item slide-card">
                     <div class="slide-card__wrap">
                       <img src="../assets/slider/coffee-slider-1.png" alt="coffee-slide1" class="slide-card__picture">
@@ -117,10 +117,10 @@
 
           </div>
 
-          <div class="favorite-slider__pagination">
-            <span class="favorite-slider__pagination-item favorite-slider__pagination-item_active"></span>
-            <span class="favorite-slider__pagination-item"></span>
-            <span class="favorite-slider__pagination-item"></span>
+          <div class="favorite-slider__progress">
+            <progress class="favorite-slider__progress-item" max="100" value="100"></progress>
+            <progress class="favorite-slider__progress-item" max="100" value="0"></progress>
+            <progress class="favorite-slider__progress-item" max="100" value="0"></progress>
           </div>
         </div>
       </section>
