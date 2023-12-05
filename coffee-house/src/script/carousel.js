@@ -3,9 +3,8 @@ export default function () {
   const nextSlideTime = 5000;
   const PROGRESS_INTERVAL = nextSlideTime / 100;
   let blockToSwichSlide = false;
-  const slideSwitchTime = 900;
+  const slideSwitchTime = 500;
   let currentSlideNumber = 1;
-
 
   const slider = document.querySelector('.favorite-slider');
   const prevBtn = document.querySelector('.favorite-slider__button-prev');
@@ -16,6 +15,7 @@ export default function () {
 
   window.addEventListener("resize", (event) => {
     width = getComputedStyle(slider).getPropertyValue('--card-width');
+    slidesContainer.style.left = Number.parseInt(width) * -1 * currentSlideNumber + 'px';
   })
 
   class progressManage {
@@ -87,9 +87,57 @@ export default function () {
     slidesContainer.style.transition =`left ${slideSwitchTime}ms`; // enable container animation with all slides
   }, 0)
 
+  const onMouseDown = (event) => {
+    if (event.type !== "touchstart" || event.target.closest('[data-outside]')) return;
+    timer.pauseTimer();
+
+    const frameXPos = event.currentTarget.getBoundingClientRect().left;
+    const frameWidth = event.currentTarget.getBoundingClientRect().width;
+    const startTouch = event.changedTouches['0'].pageX - frameXPos;
+    const startSlidePos = parseInt(slidesContainer.style.left)
+    slidesContainer.style.WebkitTransition = "none";
+    slidesContainer.style.transition = "none";
+
+    const slideFinish = (event) => {
+      let endTouch = event.changedTouches['0'].pageX - frameXPos;
+      event.currentTarget.removeEventListener("touchmove", slideMove);
+      event.currentTarget.removeEventListener("touchend", slideFinish);
+
+      if (endTouch < 0) endTouch = 0;
+			if (endTouch > frameWidth) endTouch = frameWidth;
+
+      const difference = endTouch - startTouch
+
+			if (difference < -150) {
+				moveNext();
+			} else if (difference > 150) {
+				movePrev();
+			} else {
+        slidesContainer.style.WebkitTransition = `left ${slideSwitchTime}ms`;
+        slidesContainer.style.transition =`left ${slideSwitchTime}ms`; // enable container animation with all slides
+        slidesContainer.style.left = Number.parseInt(width) * -1 * currentSlideNumber + 'px';
+        timer.startTimer(currentSlideNumber, moveNext);
+			}
+    }
+
+    const slideMove = (event) => {
+      let endTouch = event.changedTouches["0"].pageX - frameXPos;
+      if (endTouch < 0) endTouch = 0;
+			if (endTouch > frameWidth) endTouch = frameWidth;
+      slidesContainer.style.left = startSlidePos - startTouch + endTouch + 'px'; // startTouch
+    }
+
+    event.currentTarget.addEventListener("touchmove", slideMove);
+    event.currentTarget.addEventListener("touchend", slideFinish);
+		event.currentTarget.addEventListener("touchleave", slideFinish);
+  };
+
+  const timer = new sliderTimer();
   prevBtn.onclick = movePrev;
   nextBtn.onclick = moveNext;
-  const timer = new sliderTimer();
+
+  sliderFrame.addEventListener('touchstart', onMouseDown);
+
   timer.startTimer(currentSlideNumber, moveNext);
 
   sliderFrame.onmouseover = (event) => {
@@ -161,7 +209,9 @@ export default function () {
 		);
 
 		let firstDup = firstSlide.cloneNode(true);
+    firstDup.dataset.outside = 'first';
 		let lastDup = lastSlide.cloneNode(true);
+    lastDup.dataset.outside = 'last';
 
 		lastSlide.insertAdjacentElement('afterend', firstDup);
 		firstSlide.insertAdjacentElement('beforebegin', lastDup);
