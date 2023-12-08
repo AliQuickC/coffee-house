@@ -1,10 +1,25 @@
 .enjoy
   padding-bottom: 100px
+  &__container
+    position: relative
+    overflow: hidden
+    z-index: 1
+  &__video-background
+    position: absolute
+    max-width: calc(100% - 80px)
+    height: 100%
+    object-fit: cover
+    border-radius: 40px
+    z-index: -1
+    @media(max-width: 760px)
+      max-width: calc(100% - 32px)
   &__wrap
+    position: relative
     border-radius: 40px
     padding: 100px
-    background: url("../assets/enjoy/bg-enjoy.jpeg") center
-    background-size: cover
+    z-index: 2
+    // background: url("../assets/enjoy/bg-enjoy.jpeg") center
+    // background-size: cover
     @media(max-width: 860px)
       padding: 100px 60px
     @media(max-width: 680px)
