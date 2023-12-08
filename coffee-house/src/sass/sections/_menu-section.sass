@@ -42,14 +42,6 @@
       max-width: 360px
       justify-content: center
 
-@media(max-width: 768px)
-  .menu__product-card
-    display: none
-  .menu__product-card:nth-child(-n+4)
-    display: flex
-
-
-
 .radio-btn
   padding: 8px 16px 8px 8px
   border-radius: 57.5px
@@ -115,5 +107,5 @@
   border-radius: 50%
   border: 1px solid var(--border-dark)
   background: transparent url("../assets/menu-section/refresh.svg") no-repeat center
-  @media(max-width: 768px)
+  &_show
     display: block

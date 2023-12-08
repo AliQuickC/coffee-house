@@ -213,7 +213,7 @@ export default function () {
 		let lastDup = lastSlide.cloneNode(true);
     lastDup.dataset.outside = 'last';
 
-    firstSlide.after(lastDup);
+    firstSlide.before(lastDup);
     lastSlide.after(firstDup);
 	}
 };
