@@ -1,0 +1,32 @@
+.radio-btn
+  padding: 7px 16px 7px 8px
+  border-radius: 57.5px
+  border: 1px solid var(--border-light)
+  display: flex
+  align-items: center
+  column-gap: 8px
+  cursor: pointer
+  color: var(--text-dark)
+  font-size: 16px
+  font-weight: 600
+  transition: background 0.8s, border 0.8s, color 0.8s
+  &__text
+    white-space: nowrap
+  &:has(input:checked)
+    background: var(--background-container)
+    border: 1px solid var(--background-container)
+    color: var(--text-light)
+  &__icon
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    background: var(--border-light)
+    color: var(--text-dark)
+    font-size: 16px
+    font-weight: 600
+    text-transform: uppercase
+    display: flex
+    justify-content: center
+    align-items: center
+  & input:checked + .radio-btn__icon
+    background: var(--background-body)

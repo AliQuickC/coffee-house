@@ -1,0 +1,122 @@
+.modal-radio-group
+  margin: 0
+  position: relative
+  padding: 0
+  padding-top: 30px
+  display: flex
+  column-gap: 7px
+  flex-wrap: wrap
+  border: none
+  @media(max-width: 960px)
+    gap: 8px
+  @media(max-width: 720px)
+    gap: 8px 9px
+  &__title
+    position: absolute
+    top: 0px
+    font-size: 16px
+    font-weight: 400
+  &__radio-btn
+    &:has(input:checked)
+      cursor: default
+
+.product-modal
+  padding: 16px
+  display: flex
+  justify-content: space-between
+  column-gap: 20px
+  color: var(--text-dark)
+  &__picture
+    width: 308px
+    height: 308px
+    border-radius: 40px
+    @media(max-width: 720px)
+      display: none
+
+  &__text-wrap
+    width: 438px
+    @media(max-width: 960px)
+      width: 326px
+    @media(max-width: 720px)
+      width: 310px
+  &__name
+    margin: 0
+    margin-bottom: 13px
+    font-size: 24px
+    font-weight: 600
+  &__description
+    margin: 0
+    margin-bottom: 22px
+    font-size: 16px
+    font-weight: 400
+    line-height: 150% // /* 24px */
+  &__size-field
+    margin-bottom: 22px
+  &__additives-field
+    margin-bottom: 20px
+  &__price
+    margin: 0
+    margin-bottom: 21px
+    font-size: 24px
+    font-weight: 600
+    display: flex
+    justify-content: space-between
+    &-label
+    &-value
+  &__not-final
+    position: relative
+    margin: 0
+    margin-bottom: 32px
+    padding-top: 11px
+    padding-left: 24px
+    font-size: 10px
+    font-weight: 600
+    line-height: 140% // /* 14px */
+    border-top: 1px solid var(--border-light)
+    &::before
+      position: absolute
+      left: 0
+      content: ""
+      width: 17px
+      height: 16px
+      background: url("../assets/menu-section/info-empty.svg") no-repeat center
+  &__close-button
+    width: 100%
+    height: 44px
+    border-radius: 22px
+    border: 1px solid var(--border-dark)
+    color: var(--text-dark)
+    font-size: 16px
+    font-weight: 600
+    background-color: transparent
+
+.dialog
+  --modal-animation-delay: 0.7s
+  border-radius: 40px
+  background: var(--background-body)
+  padding: 0
+
+.dialog__window
+  border-radius: 16px
+
+.dialog:modal
+  border: none
+  left: 100%
+  top: 50%
+  transform: translate(100%, -50%)
+  transition: all var(--modal-animation-delay)
+  padding: 0
+  margin: 0
+
+.dialog.open:modal
+  transition: all var(--modal-animation-delay)
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.dialog::backdrop
+  background-color: rgba(64, 63, 61, 0.0)
+  transition: all 0.9s ease-out
+
+.dialog.open::backdrop
+  background-color: rgba(64, 63, 61, 0.80)
+  transition: all 0.9s ease-in

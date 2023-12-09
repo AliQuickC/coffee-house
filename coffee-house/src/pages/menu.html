@@ -41,9 +41,66 @@
   </header>
   <!-- /.header -->
 
+<!--
+  for Pixel Perfect check, add attribute "open"
+  <dialog class="dialog" id="dialog" open> -->
+  <dialog class="dialog" id="dialog">
+    <div class="dialog__window product-modal">
+      <img src="../assets/menu-section/products/coffee/coffee-1.jpg" alt="coffe" class="product-modal__picture">
+      <div class="product-modal__text-wrap">
+        <h5 class="product-modal__name">Irish coffee</h5>
+        <p class="product-modal__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+        <fieldset class="product-modal__size-field modal-radio-group modal-radio-group_size">
+          <legend class="modal-radio-group__title">Size</legend>
+          <label class="modal-radio-group__radio-btn radio-btn">
+            <input class="radio-btn__input visually-hidden" type="radio" name="product-size" value="s" checked>
+            <span class="radio-btn__icon">s</span>
+            <span class="radio-btn__text">200 ml</span>
+          </label>
+          <label class="modal-radio-group__radio-btn radio-btn">
+            <input class="radio-btn__input visually-hidden" type="radio" name="product-size" value="m" >
+            <span class="radio-btn__icon">m</span>
+            <span class="radio-btn__text">300 ml</span>
+          </label>
+          <label class="modal-radio-group__radio-btn radio-btn">
+            <input class="radio-btn__input visually-hidden" type="radio" name="product-size" value="l" >
+            <span class="radio-btn__icon">l</span>
+            <span class="radio-btn__text">400 ml</span>
+          </label>
+        </fieldset>
+        <fieldset class="product-modal__additives-field modal-radio-group">
+          <legend class="modal-radio-group__title">Additives</legend>
+          <label class="modal-radio-group__checkbox radio-btn">
+            <input class="radio-btn__input visually-hidden" type="checkbox" name="product-additives" value="sugar" >
+            <span class="radio-btn__icon">1</span>
+            <span class="radio-btn__text">Sugar</span>
+          </label>
+          <label class="modal-radio-group__checkbox radio-btn">
+            <input class="radio-btn__input visually-hidden" type="checkbox" name="product-additives" value="cinnamon" >
+            <span class="radio-btn__icon">2</span>
+            <span class="radio-btn__text">Cinnamon</span>
+          </label>
+          <label class="modal-radio-group__checkbox radio-btn">
+            <input class="radio-btn__input visually-hidden" type="checkbox" name="product-additives" value="syrup" >
+            <span class="radio-btn__icon">3</span>
+            <span class="radio-btn__text">Syrup</span>
+          </label>
+        </fieldset>
+        <p class="product-modal__price">
+          <span class="product-modal__price-label">Total: </span>
+          <output class="product-modal__price-value">$7.00</output>
+        </p>
+        <p class="product-modal__not-final">
+          The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.
+        </p>
+        <button class="product-modal__close-button" id="modal-close-button">Close</button>
+      </div>
+    </div>
+  </dialog>
 
   <main class="menu">
     <div class="container menu__container">
+
       <h1 class="menu__title">
         Behind each of our cups hides an <span class="menu__title-color">amazing surprise</span>
       </h1>
@@ -154,7 +211,6 @@
       </div>
 
       <button class="menu__refresh-button" id="refresh-button"></button>
-
 
     </div>
   </main>
