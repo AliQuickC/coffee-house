@@ -46,7 +46,11 @@
 
       <section class="enjoy">
         <div class="container enjoy__container">
-          <video class="enjoy__video-background" autoplay loop muted src="../assets/enjoy/enjoy-coffee.webm"></video>
+          <video class="enjoy__video-background" autoplay="true" loop="true" muted="true" playsinline="true" preload="yes" poster="../assets/enjoy/bg-enjoy.jpeg">
+            <source src="../assets/enjoy/enjoy-coffee.webm" type="video/webm">
+            <source src="../assets/enjoy/enjoy-coffee.mp4" type="video/mp4">
+            <img src="../assets/enjoy/bg-enjoy.jpeg" type="video/webm" alt="bg enjoy">
+          </video>
           <div class="enjoy__wrap">
             <h1 class="enjoy__title"><span class="enjoy__title-enjoy">Enjoy</span> premium coffee at our charming cafe</h1>
             <p class="enjoy__description">
