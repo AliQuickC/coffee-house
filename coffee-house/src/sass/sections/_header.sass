@@ -30,9 +30,12 @@
 .header
   background: var(--background-body)
   position: relative
-  z-index: 5
   padding: 20px 0
+  z-index: 5
   @extend %font-medium
+  &__container
+    position: relative
+    z-index: 2
   &__nav
     display: flex
     justify-content: space-between

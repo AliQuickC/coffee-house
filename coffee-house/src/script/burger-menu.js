@@ -1,9 +1,24 @@
 export default function () {
 	const burgerButton = document.getElementById('burger-button');
 	const burgerMenu = document.getElementById('burger-menu');
+  // const menuLink = burgerMenu.querySelector('.burger-menu__link-menu');
+
+  window.addEventListener("resize", ()=>{
+    if(window.innerWidth > 768 && burgerButton.classList.contains('burger-button_active')) {
+      offBurgerMenu();
+    }
+  });
 
 	burgerMenu.onclick = (event) => {
 		if (event.target.closest('.burger-menu__item-link')) {
+      event.preventDefault();
+
+      if(event.target.classList.contains('burger-menu__link-menu') && document.body.classList.contains("home-page")) {
+        setTimeout(()=>{window.location.href = 'menu.html';}, 400);
+      } else {
+        setTimeout(()=>{window.location.href = event.target.href;}, 400);
+      }
+
 			burgerButton.classList.remove('burger-button_active');
 			offBurgerMenu();
 		}
@@ -21,6 +36,7 @@ export default function () {
 
 	function offBurgerMenu() {
 		burgerMenu.classList.remove('burger-menu_active');
+    burgerButton.classList.remove('burger-button_active')
 		document.body.classList.remove('scroll-block');
 		document.documentElement.classList.remove('scroll-block');
 	}
