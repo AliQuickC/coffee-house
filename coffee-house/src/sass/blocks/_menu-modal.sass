@@ -89,6 +89,12 @@
     font-size: 16px
     font-weight: 600
     background-color: transparent
+    transition: background 0.8s, border 0.8s, color 0.8s
+    &:hover
+      @media (hover: hover)
+        color: var(--text-light)
+        background: var(--background-container)
+        transition: background 0.3s, border 0.3s, color 0.3s
 
 .dialog
   --modal-animation-delay: 0.7s
