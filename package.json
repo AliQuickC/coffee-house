@@ -12,7 +12,7 @@
 		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build"
 	},
-	"homepage": "https://rolling-scopes-school.github.io/aliquickc-JSFE2023Q4/coffee-house/",
+	"homepage": "https://aliquickc.github.io/coffee-house/",
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
